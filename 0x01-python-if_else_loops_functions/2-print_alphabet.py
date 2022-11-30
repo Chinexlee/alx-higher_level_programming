@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-alphabet = "abcdefghijklmnopqrstuvwxyz"
+alphabet="abcdefghijklmnopqrstuvwxyz"
 for i in alphabet:
-   print("{}".format(i), end = '')
+    print("{}".format(i), end='')
