@@ -11,3 +11,4 @@ if __name__ == "__main__":
         while index <= argv_count:
             sums += int(sys.argv[index])
             index += 1
+    print("{:d}".format(sums))
