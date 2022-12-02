@@ -9,5 +9,5 @@ if __name__ == "__main__":
         print("0")
     else:
         while index <= argv_count:
-            sum += int(sys.argv[index])
+            sums += int(sys.argv[index])
             index += 1
