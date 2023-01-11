@@ -2,6 +2,7 @@
 
 """Defining a class square"""
 
+
 class Square:
     """representing a class"""
 
