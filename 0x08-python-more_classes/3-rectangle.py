@@ -12,8 +12,6 @@ class Rectangle:
 
     @property
     def width(self):
-        """set/get property of width"""
-
         return self.__width
 
     @width.setter
@@ -26,20 +24,15 @@ class Rectangle:
 
     @property
     def height(self):
-        """set/get property of the class height"""
-
-        return(self.__height)
+        return self.__height
 
     @height.setter
     def height(self, value):
-        if type(value) is int:
-            self.__height = value
-
-        elif type(value) != int:
-            raise TypeError("width must be an integer")
-
-        elif height < 0:
-            raise ValueError("width must be >= 0")
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
 
     def area(self):
         """defining a method area"""
@@ -50,11 +43,10 @@ class Rectangle:
     def perimeter(self):
         """defining the method perimeter of the class rectangle"""
 
-        if self.__width or self.__height is 0:
-            return(int(0))
-        elif self.__width or self.__height > 0:
-            p = (2 * self.__width) + (2 * self.__height)
-            return(p)
+        if self.__width is 0 or self.__height is 0:
+            return 0
+        p = (2 * self.__width) + (2 * self.__height)
+        return(p)
 
     def __str__(self):
         """definition of function __str__"""
