@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-
-"""creation of class"""
+"""
+This is the "Rectangle"  module.
+This module provides a simple Rectangle class.
+"""
 
 
 class Rectangle:
-    """definition of class Rectangle"""
-
+    """A Rectangle class with attributes width and height, and
+    methods area, perimeter, print, and str.
+    """
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -34,28 +37,20 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    def area(self):
-        """defining a method area"""
-
-        a = self.__width * self.__height
-        return(a)
-
-    def perimeter(self):
-        """defining the method perimeter of the class rectangle"""
-
-        if self.__width is 0 or self.__height is 0:
-            return 0
-        p = (2 * self.__width) + (2 * self.__height)
-        return(p)
-
     def __str__(self):
-        """definition of function __str__"""
-
         total = ""
-        if self.__height is 0 and self.__width is 0:
-            return(total)
+        if self.__height == 0 or self.width == 0:
+            return total
         for i in range(self.__height):
             total += ("#" * self.__width)
             if i is not self.__height - 1:
                 total += "\n"
         return total
+
+    def area(self):
+        return self.__width * self.__height
+
+    def perimeter(self):
+        if self.__width is 0 or self.__height is 0:
+            return 0
+        return (2 * self.__width) + (2 * self.__height)
