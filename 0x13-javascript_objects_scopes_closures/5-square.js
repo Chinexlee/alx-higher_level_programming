@@ -8,29 +8,27 @@ class Rectangle {
       this.height = h;
     }
   }
-   print () {
+  print () {
     let i = 0;
     while (i < this.height) {
-        console.log('X'.repeat(this.width));
-        i++;
+      console.log('X'.repeat(this.width));
+      i++;
     }
-   }
-    double () {
-        this.width = this.width * 2;
-        this.height = this.height * 2;
-    }
-    rotate () {
-        let holder = this.width;
-        this.width = this.height;
-        this.height = holder;
-    }
+  }
+  double () {
+    this.width = this.width * 2;
+    this.height = this.height * 2;
+  }
+  rotate () {
+    let holder = this.width;
+    this.width = this.height;
+    this.height = holder;
+  }
 }
 
 class Square extends Rectangle {
-    constructor (size) {
-        super(size, size);
-        this.size = size;
-    }
+  constructor (size) {
+    super(size, size);
+  }
 }
-module.exports = Rectangle;
 module.exports = Square;
