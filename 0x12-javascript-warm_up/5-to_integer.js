@@ -1,10 +1,9 @@
 #!/usr/bin/node
-//prints script if first argument can be converted to int
 const process = require('process');
 let args = process.argv;
-if(isNaN(args[2])){
+if(isNaN(args[2]) || args[2] === undefined){
     console.log('Not a number');
 }
 else{
-    console.log('My Number: ' + parseInt(args[2]));
+    console.log('My Number: ' , parseInt(args[2]));
 }
