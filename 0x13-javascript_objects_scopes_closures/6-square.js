@@ -6,9 +6,9 @@ class Square extends newSquare {
       if (c === undefined) {
         console.log('X'.repeat(this.width));
       } else {
-        console.log('C'.repeat(this.width));
+        console.log(c.repeat(this.width));
       }
     }
-  };
+  }
 }
 module.exports = Square;
