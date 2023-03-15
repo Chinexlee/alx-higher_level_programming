@@ -8,6 +8,7 @@ class Rectangle {
       this.height = h;
     }
   }
+
   print () {
     let i = 0;
     while (i < this.height) {
@@ -15,12 +16,14 @@ class Rectangle {
       i++;
     }
   }
+
   double () {
     this.width = this.width * 2;
     this.height = this.height * 2;
   }
+
   rotate () {
-    let holder = this.width;
+    const holder = this.width;
     this.width = this.height;
     this.height = holder;
   }
